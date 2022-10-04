@@ -1,0 +1,11 @@
+<header>
+    {% if active_page is not month_name %}
+        <nav>
+            <a href="{% url "home" %}"> {{ active_page }} </a>
+        </nav>
+    {% else %}
+        <nav>
+            <a href="{% url "home" %}"> < {{ month_name | title }} </a>
+        </nav>
+    {% endif %}
+</header>
